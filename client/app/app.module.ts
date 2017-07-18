@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdGridListModule, MdMenuModule, MdButtonModule } from '@angular/material';
+import { MdGridListModule, MdMenuModule, MdButtonModule, MdListModule } from '@angular/material';
 
 import { Routes, RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -12,11 +12,13 @@ import { routing } from './app.routes';
 import { HomeComponent } from './home/home.component';
 
 import { AuthService } from './services/auth.service';
+import { CallbackComponent } from './services/callback.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    CallbackComponent
   ],
   imports: [
     BrowserModule,
@@ -24,6 +26,7 @@ import { AuthService } from './services/auth.service';
     MdGridListModule,
     MdMenuModule,
     MdButtonModule,
+    MdListModule,
     ReactiveFormsModule,
     routing
   ],

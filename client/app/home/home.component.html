@@ -1,8 +1,5 @@
-<md-grid-list cols="3" rowHeight="2:1">
-  <md-grid-tile>1</md-grid-tile>
-  <md-grid-tile>2</md-grid-tile>
-  <md-grid-tile>3</md-grid-tile>
-  <md-grid-tile>4</md-grid-tile>
-  <md-grid-tile>5</md-grid-tile>
-  <md-grid-tile>6</md-grid-tile>
-</md-grid-list>
+<div class="container">
+  <md-grid-list *ngIf="authService.authenticated" cols="3" rowHeight="2:1">
+    <md-grid-tile *ngFor="let tile of tiles">{{ tile }}</md-grid-tile>
+  </md-grid-list>
+</div>

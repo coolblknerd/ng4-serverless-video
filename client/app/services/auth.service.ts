@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import 'rxjs/add/operator/filter';
 import * as auth0 from 'auth0-js';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { tokenNotExpired } from 'angular2-jwt';

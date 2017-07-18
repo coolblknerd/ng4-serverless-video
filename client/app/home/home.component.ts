@@ -12,6 +12,5 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  public login() {
-  }
+  tiles = [1, 2, 3, 4, 5, 6]
 }
