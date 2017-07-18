@@ -1,4 +1,6 @@
 # Modules
 ./node_modules/*
 
+# Dependency Info
+./client/app/services/auth0-variables.ts
 

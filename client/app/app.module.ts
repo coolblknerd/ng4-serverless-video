@@ -9,13 +9,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { routing } from './app.routes';
-import { SignUpComponent } from './sign-up/sign-up.component';
 import { HomeComponent } from './home/home.component';
+
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SignUpComponent,
     HomeComponent
   ],
   imports: [
@@ -27,7 +27,9 @@ import { HomeComponent } from './home/home.component';
     ReactiveFormsModule,
     routing
   ],
-  providers: [],
+  providers: [
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

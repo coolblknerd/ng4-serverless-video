@@ -1,1 +1,15 @@
-<router-outlet></router-outlet>
+<div class="container">
+  <button md-button>Home</button>
+
+  <md-nav-list>
+    <a *ngIf="!authService.authenticated" (click)="authService.login()" id="login-button" md-list-item>Login</a>
+    <a *ngIf="authService.authenticated" (click)="authService.logout()" id="login-button" md-list-item>Logout</a>
+  </md-nav-list>
+
+
+  <div class="home-header">
+    <img src="../../assets/cloud-logo.png" alt="">
+  </div>
+
+  <router-outlet></router-outlet>
+</div>
