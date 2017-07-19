@@ -50,20 +50,18 @@ export class AuthService {
   }
 
   private _getProfile(authResult) {
-    this.auth0.clint.userInfo(authResult.accessToken, (err, profile) => {
+    this.auth0.client.userInfo(authResult.accessToken, (err, profile) => {
       this._setSession(authResult, profile);
     });
   }
 
   private _setSession(authResult, profile) {
-    localStorage.setItem('token', authResult.accessToken);
     localStorage.setItem('id_token', authResult.idToken);
     localStorage.setItem('profile', JSON.stringify(profile));
     this.setLoggedIn(true);
   }
 
   logout() {
-    localStorage.removeItem('token');
     localStorage.removeItem('id_token');
     localStorage.removeItem('profile');
     this.router.navigate(['/']);
@@ -71,6 +69,6 @@ export class AuthService {
   }
 
   get authenticated() {
-    return tokenNotExpired('token');
+    return tokenNotExpired('id_token');
   }
 }
